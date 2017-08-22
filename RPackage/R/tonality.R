@@ -86,7 +86,11 @@ extract_tonality_ngrams <- function(x){
   tone_ngram_list <- lapply(x$tonality, FUN = function(X) lapply(X$sentences, function(Y) Y$ngrams))
   names(tone_ngram_list) <- paste0("ngram.", tones)
   tone_ngram_list <- lapply(tone_ngram_list, FUN = function(X) {names(X) <- 1:length(X);X})
-  tone_ngram_list <- unlist(tone_ngram_list)
+  
+  size <- sum(unlist(lapply(tone_ngram_list, FUN = function(X) lapply(X, length))))
+  if(size == 0) return(NULL)
+  
+  tone_ngram_list <- unlist(tone_ngram_list)    
   ngram_bool <- stringr::str_detect(names(tone_ngram_list), "\\.ngram")
   score_bool <- stringr::str_detect(names(tone_ngram_list), "\\.score")
   
