@@ -26,14 +26,8 @@ tonality <- function(texts, api_key, language, tonality = NULL){
   httr::stop_for_status(r)
 
   r_content <- httr::content(r)
-  
-  doc_scores <- dplyr::bind_rows(lapply(r_content$texts, extract_tonality_score_by_doc))
-  sentence_scores <- dplyr::bind_rows(lapply(r_content$texts, extract_tonality_score_by_sentence))
-  ngram_scores <- dplyr::bind_rows(lapply(r_content$texts, extract_tonality_ngrams))
-  
-  list(doc_scores = doc_scores,
-       sentence_scores = sentence_scores,
-       ngram_scores = ngram_scores)
+  class(r_content) <- c("gavagai_tonality", "list")
+  r_content
 }
 
 #' Extract sentence level sentiments and scores
