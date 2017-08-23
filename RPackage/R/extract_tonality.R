@@ -2,21 +2,21 @@
 #' 
 #' @param x a \code{gavagai_tonality} object.
 #' @export
-document_scores <- function(x){
+tonality_document <- function(x){
   checkmate::assert_class(x, "gavagai_tonality")
   dplyr::bind_rows(lapply(x$texts, extract_tonality_score_by_doc))
 }
 
-#' @rdname document_scores
+#' @rdname tonality_document
 #' @export
-sentence_scores <- function(x){
+tonality_sentence <- function(x){
   checkmate::assert_class(x, "gavagai_tonality")
   dplyr::bind_rows(lapply(x$texts, extract_tonality_score_by_sentence))
 } 
 
-#' @rdname document_scores
+#' @rdname tonality_document
 #' @export
-ngram_scores <- function(x){
+tonality_ngram <- function(x){
   checkmate::assert_class(x, "gavagai_tonality")
   dplyr::bind_rows(lapply(x$texts, extract_tonality_ngrams))
 } 
