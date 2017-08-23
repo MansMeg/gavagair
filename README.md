@@ -8,7 +8,7 @@ There are academic licenses, but then you need to contact Gavagai.
 2. Install the ```gavagair``` R package.
 ```
 > install.packages("devtools")
-> devtools::install_github("MansMeg/gavagair")
+> devtools::install_github("MansMeg/gavagair", subdir = "RPackage")
 ```
 
 ## Use the Gavagai API
