@@ -16,7 +16,7 @@ devtools::install_github("MansMeg/gavagair")
 We start out by creating two sentences from Jane Austens "Pride and prejudice"" we want to get tonality for:
 
 ```
-install.packages("devtools")
+install.packages("janeaustenr")
 library(janeaustenr)
 data("prideprejudice")
 pride_sentence <- 
