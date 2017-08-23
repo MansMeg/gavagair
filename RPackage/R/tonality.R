@@ -1,5 +1,8 @@
 #' Get tonality of text from Gavagai API
 #' 
+#' @details 
+#' See \code{https://developer.gavagai.se/}.
+#' 
 #' @param texts The texts to extract tonality from.
 #' @param api_key API key to use to connect to the API.
 #' @param language The language code in ISO 639-1

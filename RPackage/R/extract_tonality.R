@@ -11,7 +11,7 @@ document_scores <- function(x){
 #' @export
 sentence_scores <- function(x){
   checkmate::assert_class(x, "gavagai_tonality")
-  dplyr::bind_rows(lapply(x$texts, extract_tonality_score_by_doc))
+  dplyr::bind_rows(lapply(x$texts, extract_tonality_score_by_sentence))
 } 
 
 #' @rdname document_scores

@@ -21,3 +21,6 @@ language <- "en"}
 \description{
 Get tonality of text from Gavagai API
 }
+\details{
+See \code{https://developer.gavagai.se/}.
+}
