@@ -1,5 +1,5 @@
 # gavagair
-Connection to the Gavagai API to extract tonality . This is **not** an official product of Gavagai. This package try to conform to the ideas of tidy text analysis. See more [here](https://cran.r-project.org/web/packages/tidytext/vignettes/tidytext.html).
+Connection to the Gavagai API to extract tonality . This is **not** an official product of Gavagai. This package try to conform to the ideas of tidy text analysis (but this is not yet fully implemented). See more [here](https://cran.r-project.org/web/packages/tidytext/vignettes/tidytext.html).
 
 ## Get started
 1. You need to get an api key from Gavagai. You need to get an account [here](https://developer.gavagai.se). To try out the API you can 
@@ -45,7 +45,7 @@ gavagai_tonality_object <-
   tonality(texts = pride_sentence, api_key = api_key, language = "en")
 ```
 
-The API returns an gavagai tonality api object. From this we can extract the document level, senetence level and individual tonality types/ngrams:
+The API returns an gavagai tonality api object. From this we can extract tonality at the document level, at the senetence level and at the token/ngram level:
 
 ```
 > tonality_document(gavagai_tonality_object)
