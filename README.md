@@ -5,7 +5,7 @@ Connection to the Gavagai API to extract tonality . This is **not** an official 
 1. You need to get an api key from Gavagai. You need to get an account [here](https://developer.gavagai.se). To try out the API you can 
 There are academic licenses, but then you need to contact Gavagai.
 
-Install the ```gavagair``` R package.
+2. Install the ```gavagair``` R package.
 ```
 install.packages("devtools")
 devtools::install_github("MansMeg/gavagair")
