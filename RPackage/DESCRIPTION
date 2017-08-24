@@ -6,7 +6,7 @@ Date: 2017-08-22
 Author: Mans Magnusson
 Maintainer: Mans Magnusson <mons.magnusson@gmail.com>
 Description: Connects to the Gavagai API from R.
-License: MIT
-Imports: stringr, httr, dplyr, checkmate
+License: BSD_2_clause + file LICENSE
+Imports: stringr, httr, dplyr, checkmate, jsonlite
 Suggests: testthat
 RoxygenNote: 6.0.1
